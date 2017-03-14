@@ -1,0 +1,20 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "Movie database with node.js and mongodb",
+  "main": "app.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.24",
+    "morgan": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+	  "start": "node app.js"
+  },
+  "author": "Sukru Gunay",
+  "license": "ISC"
+}

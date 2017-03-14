@@ -1,0 +1,195 @@
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+<h1>Node.js - MongoDB Movie list application</h1>
+
+<section class="allDataList">
+    <a href="/dataList">Click for all customer list</a>
+    <div>
+
+        <article class="item">
+            <table id="datatable" border="solid" width="1300" >
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Rated</th>
+                        <th>Released</th>
+                        <th>Runtime</th>
+                        <th>Genre</th>
+                        <th>Director</th>
+                        <th>Writer</th>
+                        <th>Actors</th>
+                        <th>Language</th>
+                        <th>Country</th>
+                        <th>Awards</th>
+                        <th>_ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{# each items }}
+                    <tr>
+                      <td>{{this.Title}}</td>
+                      <td>{{this.Year}}</td>
+                      <td>{{this.Rated}}</td>
+                      <td>{{this.Released}}</td>
+                      <td>{{this.Runtime}}</td>
+                      <td>{{this.Genre}}</td>
+                      <td>{{this.Director}}</td>
+                      <td>{{this.Writer}}</td>
+                      <td>{{this.Actors}}</td>
+                      <td>{{this.Language}}</td>
+                      <td>{{this.Country}}</td>
+                      <td>{{this.Awards}}</td>
+                      <td>{{this._id}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </article>
+
+    </div>
+</section>
+
+<section class="insert">
+    <h3>Insert Movie</h3>
+    <form action="/insert" method="post">
+        <div class="input">
+            <label for="title">Title :</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="year">Year :</label>
+            <input type="text" id="year" name="year">
+        </div>
+        <div class="input">
+            <label for="rated">Rated :</label>
+            <input type="text" id="rated" name="rated">
+        </div>
+        <div class="input">
+            <label for="released">Released :</label>
+            <input type="text" id="released" name="released">
+        </div>
+        <div class="input">
+            <label for="runtime">Runtime :</label>
+            <input type="text" id="runtime" name="runtime">
+        </div>
+        <div class="input">
+            <label for="genre">Genre :</label>
+            <input type="text" id="genre" name="genre">
+        </div>
+        <div class="input">
+            <label for="director">Director :</label>
+            <input type="text" id="director" name="director">
+        </div>
+        <div class="input">
+            <label for="writer">Writer :</label>
+            <input type="text" id="writer" name="writer">
+        </div>
+        <div class="input">
+            <label for="actors">Actors :</label>
+            <input type="text" id="actors" name="actors">
+        </div>
+        <div class="input">
+            <label for="plot">Plot :</label>
+            <input type="text" id="plot" name="plot">
+        </div>
+        <div class="input">
+            <label for="language">Language :</label>
+            <input type="text" id="language" name="language">
+        </div>
+        <div class="input">
+            <label for="country">Country :</label>
+            <input type="text" id="country" name="country">
+        </div>
+        <div class="input">
+            <label for="awards">Awards :</label>
+            <input type="text" id="awards" name="awards">
+        </div>
+        <button type="submit">Insert</button>
+    </form>
+</section>
+
+<section class="update">
+    <h3>Update Movie</h3>
+    <form action="/update" method="post">
+        <div class="input">
+            <label for="movieID">Moie iD :</label>
+            <input type="text" id="movieID" name="movieID">
+        </div>
+        <div class="input">
+            <label for="title">Title :</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="year">Year :</label>
+            <input type="text" id="year" name="year">
+        </div>
+        <div class="input">
+            <label for="rated">Rated :</label>
+            <input type="text" id="rated" name="rated">
+        </div>
+        <div class="input">
+            <label for="released">Released :</label>
+            <input type="text" id="released" name="released">
+        </div>
+        <div class="input">
+            <label for="runtime">Runtime :</label>
+            <input type="text" id="runtime" name="runtime">
+        </div>
+        <div class="input">
+            <label for="genre">Genre :</label>
+            <input type="text" id="genre" name="genre">
+        </div>
+        <div class="input">
+            <label for="director">Director :</label>
+            <input type="text" id="director" name="director">
+        </div>
+        <div class="input">
+            <label for="writer">Writer :</label>
+            <input type="text" id="writer" name="writer">
+        </div>
+        <div class="input">
+            <label for="actors">Actors :</label>
+            <input type="text" id="actors" name="actors">
+        </div>
+        <div class="input">
+            <label for="plot">Plot :</label>
+            <input type="text" id="plot" name="plot">
+        </div>
+        <div class="input">
+            <label for="language">Language :</label>
+            <input type="text" id="language" name="language">
+        </div>
+        <div class="input">
+            <label for="country">Country :</label>
+            <input type="text" id="country" name="country">
+        </div>
+        <div class="input">
+            <label for="awards">Awards :</label>
+            <input type="text" id="awards" name="awards">
+        </div>
+        <button type="submit">Update</button>
+    </form>
+</section>
+</section>
+<section class="delete">
+    <h3>Delete Movie</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="movieID">Movie ID :</label>
+            <input type="text" id="movieID" name="movieID">
+        </div>
+        <button type="submit" class="deleteButton">DELETE</button>
+    </form>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#datatable').DataTable();
+    });
+    $(document).ready(function() {
+        $('#oneMovie').DataTable();
+    });
+</script>
